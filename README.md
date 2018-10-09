@@ -9,7 +9,7 @@ In the previous lab, you defined at a few sample spaces by counting the total nu
 
 ## Objectives
 
-In this section, you'll be provided content so you'll:
+You will be able to: 
 - Understand how to count permutations, and how factorials are the building blocks of permutations
 - Understand how to mathematically derive how many permutations there are for big sets
 - Understand how to compute permutations of a subset
