@@ -54,7 +54,7 @@ Now, lets consider another example. "Who's bad" is still playing a concert at ce
 
 When the band members decide on the first song, they have 8 possible songs to choose from. When chosing the second song, they have 7 to choose from. Then for the third song, they have 6 left.
 
- $ \text{# Jackson k-permutations} = 8*7*6 = 3366$
+ $ \text{# Jackson k-permutations} = 8*7*6 = 336$
 
 formalizing this, the question is how many ways we can select $k$ elements out of a pool of $n$ objects. The answer is 
 
