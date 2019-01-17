@@ -1,5 +1,5 @@
 
-# Factorials and Permutations
+# Permutations and Factorials
 
 
 
