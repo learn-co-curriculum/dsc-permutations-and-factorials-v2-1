@@ -15,7 +15,7 @@ You will be able to:
 - Understand how to compute permutations of a subset
 - Learn about permutations with replacement and repetition
 
-## Defining the sample space by counting
+## Defining the Sample Space by Counting
 
 Let's consider the following example.
 
@@ -48,7 +48,7 @@ This is a way how you can tackle this. You're the front singer and have to decid
 
 Generalizing this to $n$, this means that the number of permutations with $n$ distinct objects is $n!$, or the factorial of $n$.
 
-## Permutations of a subset
+## Permutations of a Subset
 
 Now, lets consider another example. "Who's bad" is still playing a concert at central park, but the disagree on the final three songs that they will play. They only get a 12min gig slot, so they really can't play more than 3, yet they have a shortlist of 8 they need to pick from. How many final song selections are possible given this info? As for the first example, the order of the songs played is still important.
 
@@ -64,19 +64,33 @@ This is known as a $k$-permutation of $n$.
 
 The idea is here that we only "care" about the order of the first $k$ objects. The order of the other $(n-k)$ objects doesn't matter, hence they're left out of the equation.
 
-## Permutations with replacement
+## Permutations with Replacement
 
-When talking about setlists, it makes total sense to assume that songs will not be played twice. This is not always how it works though. Let's consider throwing a dice. Imagine a bag with three marbles in it: a green one, a red one, and a blue one. Now we'll draw marbles three times in a row, but each time, we'll write down the marble color and *put it back in the bag* before drawing again.
+When talking about setlists, it makes total sense to assume that songs will not be played twice. This is not always how it works though. Imagine a bag with three marbles in it: a green one, a red one, and a blue one. Now we'll draw marbles three times in a row, but each time, we'll write down the marble color and *put it back in the bag* before drawing again.
 
 Now the number of possible outcomes is $3 * 3 * 3$.
 
-Except for the fact that marbles can be  put back in the bag,
-
 Generalizing this to $n$, this means that the number of permutations with replacenent when having $n$ distinct objects is equal to $n^j$ where $j$ is the number of "draws".
 
-## Permutations with repetition
+## Permutations with Repetition
 
-Let's go back to the example where a teaching assistant has a meeting with 3 female and 3 male students. Here, we have n=6 objects, but unlike the previously discussed topics, there is **repetition** in this case. 
+When using permutations, some elements may be *repeated*.
+
+A classic example is using permutations on words. Let's say you have the letters of the word "TENNESSEE". How many different words can you create using these letters?
+
+Simply saying that there are 9 letters so the answer is $9!$ does not give you the correct answer. Looking at the word TENNESSEE by itself, you can swap the 3rd and the 4th letter and have the same word. So the total number is less than $9!$.
+
+The solution is to divide $9!$ by the factorials for each letter that is repeated!
+
+The answer here is then (9 letters, 4 x E, 2 x N, 2 x S)
+
+$\dfrac{9!}{4!2!2!} = 3780$
+
+The general formula can be written as:
+
+$\dfrac{n!}{n_1!n_2!\ldots n_k!}$
+
+where $n_j$ stands for identical objects of type $j$ (the distinct letters in our TENNESSEE example). 
 
 ## Summary
 
