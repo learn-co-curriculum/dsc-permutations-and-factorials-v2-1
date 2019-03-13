@@ -42,7 +42,7 @@ That's it! When we count the possible outcomes, we get to 6 elements in the samp
 
 The problem setting in general is that, there are $n$ objects, and we want to know how many *permutations* are possible.
 
-This is a way how you can tackle this. You're the front singer and have to decide which song to play first. You have 3 songs to choose from, so 3 ways of chosing a first song. Then, you move on to the second song. You've chosen the first one, so you have 2 songs to choose from now. Etcetera. Mathematically, this boils down to:
+This is a way how you can tackle this. You're the front singer and have to decide which song to play first. You have 3 songs to choose from, so 3 ways of choosing a first song. Then, you move on to the second song. You've chosen the first one, so you have 2 songs to choose from now. Etcetera. Mathematically, this boils down to:
 
  $ \text{# Jackson permutations} = 3*2*1 = 3 ! = 6$
 
@@ -52,7 +52,7 @@ Generalizing this to $n$, this means that the number of permutations with $n$ di
 
 Now, lets consider another example. "Who's bad" is still playing a concert at central park, but the disagree on the final three songs that they will play. They only get a 12min gig slot, so they really can't play more than 3, yet they have a shortlist of 8 they need to pick from. How many final song selections are possible given this info? As for the first example, the order of the songs played is still important.
 
-When the band members decide on the first song, they have 8 possible songs to choose from. When chosing the second song, they have 7 to choose from. Then for the third song, they have 6 left.
+When the band members decide on the first song, they have 8 possible songs to choose from. When choosing the second song, they have 7 to choose from. Then for the third song, they have 6 left.
 
  $ \text{# Jackson k-permutations} = 8*7*6 = 336$
 
@@ -70,7 +70,7 @@ When talking about setlists, it makes total sense to assume that songs will not 
 
 Now the number of possible outcomes is $3 * 3 * 3$.
 
-Generalizing this to $n$, this means that the number of permutations with replacenent when having $n$ distinct objects is equal to $n^j$ where $j$ is the number of "draws".
+Generalizing this to $n$, this means that the number of permutations with replacement when having $n$ distinct objects is equal to $n^j$ where $j$ is the number of "draws".
 
 ## Permutations with Repetition
 
