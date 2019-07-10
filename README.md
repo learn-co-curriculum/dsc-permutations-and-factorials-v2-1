@@ -19,23 +19,23 @@ You will be able to:
 
 Let's consider the following example.
 
-The Michael Jackson tribute band "Who's bad" is playing a free mini gig in Central Park next week. They have selected three all-time classics: "Billy Jean", "Bad" and "Thriller", but still have to decide the order they will play the songs in. Knowing this, how many playlists are possible?
+The Beyonce tribute band "The Single Ladies" is playing a free mini gig in your local park next week. They have selected three all-time classics: "Drunk in Love", "Crazy in Love" and "Formation", but still have to decide the order they will play the songs in. Knowing this, how many playlists are possible?
 
 It is easy and fairly quick to write down possible orders here:
 
-"Thriller", "Bad", "Billy Jean"
+"Drunk in Love", "Crazy in Love", "Formation"
 
-"Thriller", "Billy Jean", "Bad"
+"Drunk in Love", "Formation", "Crazy in Love"
 
-"Billy Jean", "Thriller", "Bad"
+"Crazy in Love", "Drunk in Love", "Formation"
 
-"Billy Jean", "Bad", "Thriller"
+"Crazy in Love", "Formation", "Drunk in Love" 
 
-"Bad", "Thriller", "Billy Jean"
+"Formation", "Drunk in Love", "Crazy in Love"
 
-"Bad", "Billy Jean", "Thriller"
+"Formation", "Crazy in Love", "Drunk in Love"
 
-That's it! When we count the possible outcomes, we get to 6 elements in the sample set. Now what if "Who's bad" plays a setlist of 4 songs? or 5? That's where the notion of *permutations* comes in handy.
+That's it! When we count the possible outcomes, we get to 6 elements in the sample set. Now what if "The Single Ladies" plays a setlist of 4 songs? or 5? That's where the notion of *permutations* comes in handy.
 
 
 ## Permutations
@@ -44,17 +44,17 @@ The problem setting in general is that, there are $n$ objects, and we want to kn
 
 This is a way how you can tackle this. You're the front singer and have to decide which song to play first. You have 3 songs to choose from, so 3 ways of choosing a first song. Then, you move on to the second song. You've chosen the first one, so you have 2 songs to choose from now. Etcetera. Mathematically, this boils down to:
 
- $ \text{# Jackson permutations} = 3*2*1 = 3 ! = 6$
+ $ \text{# Beyonce permutations} = 3*2*1 = 3 ! = 6$
 
 Generalizing this to $n$, this means that the number of permutations with $n$ distinct objects is $n!$, or the factorial of $n$.
 
 ## Permutations of a Subset
 
-Now, lets consider another example. "Who's bad" is still playing a concert at central park, but the disagree on the final three songs that they will play. They only get a 12min gig slot, so they really can't play more than 3, yet they have a shortlist of 8 they need to pick from. How many final song selections are possible given this info? As for the first example, the order of the songs played is still important.
+Now, lets consider another example. "The Single Ladies" is still playing a concert at central park, but the disagree on the final three songs that they will play. They only get a 12min gig slot, so they really can't play more than 3, yet they have a shortlist of 8 they need to pick from. How many final song selections are possible given this info? As for the first example, the order of the songs played is still important.
 
 When the band members decide on the first song, they have 8 possible songs to choose from. When choosing the second song, they have 7 to choose from. Then for the third song, they have 6 left.
 
- $ \text{# Jackson k-permutations} = 8*7*6 = 336$
+ $ \text{# Beyonce k-permutations} = 8*7*6 = 336$
 
 formalizing this, the question is how many ways we can select $k$ elements out of a pool of $n$ objects. The answer is 
 
