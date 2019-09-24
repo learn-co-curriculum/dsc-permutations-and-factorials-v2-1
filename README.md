@@ -5,7 +5,7 @@
 
 ## Introduction
 
-In the previous lab, you defined at a few sample spaces by counting the total number of possible outcomes. This is not very practical when sample spaces grow. In this lab, you'll be introduced to *permutations*, which will provide a structured way to help you define sample space sizes!
+In the previous lab, you defined a few sample spaces by counting the total number of possible outcomes. This is not very practical when sample spaces grow. In this lab, you'll be introduced to *permutations*, which will provide a structured way to help you define sample space sizes!
 
 ## Objectives
 
@@ -40,9 +40,9 @@ That's it! When we count the possible outcomes, we get to 6 elements in the samp
 
 ## Permutations
 
-The problem setting in general is that, there are $n$ objects, and we want to know how many *permutations* are possible.
+The problem setting, in general, is that there are $n$ objects and we want to know how many *permutations* are possible.
 
-This is a way how you can tackle this. You're the front singer and have to decide which song to play first. You have 3 songs to choose from, so 3 ways of choosing a first song. Then, you move on to the second song. You've chosen the first one, so you have 2 songs to choose from now. Etcetera. Mathematically, this boils down to:
+This is a way how you can tackle this. You're the lead singer and have to decide which song to play first. You have 3 songs to choose from, so 3 ways of choosing a first song. Then, you move on to the second song. You've chosen the first one, so you have 2 songs to choose from now, etc. Mathematically, this boils down to:
 
  $ \text{# Beyonce permutations} = 3*2*1 = 3 ! = 6$
 
@@ -50,7 +50,7 @@ Generalizing this to $n$, this means that the number of permutations with $n$ di
 
 ## Permutations of a Subset
 
-Now, lets consider another example. "The Single Ladies" is still playing a concert at central park, but the disagree on the final three songs that they will play. They only get a 12min gig slot, so they really can't play more than 3, yet they have a shortlist of 8 they need to pick from. How many final song selections are possible given this info? As for the first example, the order of the songs played is still important.
+Now, let's consider another example. "The Single Ladies" are still playing a concert at central park, but they disagree on the final three songs that they will play. They only get a 12 min gig slot, so they really can't play more than 3, yet they have a shortlist of 8 they need to pick from. How many final song selections are possible given this info? As for the first example, the order of the songs played is still important.
 
 When the band members decide on the first song, they have 8 possible songs to choose from. When choosing the second song, they have 7 to choose from. Then for the third song, they have 6 left.
 
