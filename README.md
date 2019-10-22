@@ -18,7 +18,7 @@ You will be able to:
 
 Let's consider the following example.
 
-The Beyonce tribute band "The Single Ladies" is playing a free mini gig in your local park next week. They have selected three all-time classics: "Drunk in Love", "Crazy in Love" and "Formation", but still have to decide the order they will play the songs in. Knowing this, how many playlists are possible?
+The Beyoncé tribute band "The Single Ladies" is playing a free mini gig in your local park next week. They have selected three all-time classics: "Drunk in Love", "Crazy in Love" and "Formation", but still have to decide the order they will play the songs in. Knowing this, how many playlists are possible?
 
 It is easy and fairly quick to write down possible orders here:
 
@@ -43,7 +43,7 @@ The problem setting, in general, is that there are $n$ objects and we want to kn
 
 This is a way how you can tackle this. You're the lead singer and have to decide which song to play first. You have 3 songs to choose from, so 3 ways of choosing a first song. Then, you move on to the second song. You've chosen the first one, so you have 2 songs to choose from now, etc. Mathematically, this boils down to:
 
- $ \text{# Beyonce permutations} = 3*2*1 = 3 ! = 6$
+ $ \text{# Beyoncé permutations} = 3*2*1 = 3 ! = 6$
 
 Generalizing this to $n$, this means that the number of permutations with $n$ distinct objects is $n!$, or the factorial of $n$.
 
@@ -53,7 +53,7 @@ Now, let's consider another example. "The Single Ladies" are still playing a con
 
 When the band members decide on the first song, they have 8 possible songs to choose from. When choosing the second song, they have 7 to choose from. Then for the third song, they have 6 left.
 
- $ \text{# Beyonce k-permutations} = 8*7*6 = 336$
+ $ \text{# Beyoncé k-permutations} = 8*7*6 = 336$
 
 formalizing this, the question is how many ways we can select $k$ elements out of a pool of $n$ objects. The answer is 
 
@@ -90,6 +90,56 @@ The general formula can be written as:
 $\dfrac{n!}{n_1!n_2!\ldots n_k!}$
 
 where $n_j$ stands for identical objects of type $j$ (the distinct letters in our TENNESSEE example). 
+
+## Level-Up: Factorials and Recursion 
+
+At the start of this lesson, when discussing the number of possible permutations we can obtain for n distinct objects, we mentioned the concept of the factorial of n, denoted by $n!$. 
+
+In the example presented to you, we wanted to count all possible ways in which three different Beyoncé songs could be played by the Beyoncé tribute band "The Single Ladies". There were 3 possible ways of choosing a first song, 2 possible ways of choosing a second song, and only 1 way of choosing a third and final song, for $3*2*1 = 6$ different ways in which the three different songs could be played. This number, 6, is equal to the factorial of 3, $3!$, the number of permutations of 3 distinct objects. 
+
+Here, $3! = (3 * 2 * 1) = 6$. Notice that this is the same as writing $3 * 2! = 3 * (2 * 1)$ and $3 * 2 * 1! = 3 * 2 * (1)$. (By definition, the factorial of 1, $1!$, is equal to 1. The factorial of 0, $0!$ is also defined to be equal to 1.)
+
+We can generalize this to the case of computing the factorial of an integer n, $n!$. The factorial of n, $n!$, can be written as $n * (n-1)!$, which itself can be written as $n * (n-1) * (n-2)!$. That is, we can define the factorial of n in terms of the product of n by the factorial of (n-1), and so on and so forth, as seen in the equation below: 
+
+$$ n! = n * (n-1)! = n * (n-1) * (n-2)! = ... = n * (n-1) * (n-2) * ... * 2! = n* (n-1) * (n-2) * ... * 2 * 1! $$ 
+
+### Recursion 
+When we define a function in terms of itself, we are using **recursion**.  Recursive functions are functions that can call themselves in order to loop until a condition is met. In the Appendix to this Module, we go over recursive functions in Python in more detail.
+
+We can use recursion to define a function that will return the factorial of an integer n as follows: 
+
+``` python
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n-1) 
+```
+
+Let's go over what happens with this function for the case n = 3: 
+
+* To start, since n is not equal to 1, we skip the `if` statement and continue to the `else` statement, where we obtain that `factorial(3) = 3 * factorial(2)`.
+
+* To calculate `factorial(2)`, since the argument passed to the function is not equal to 1, we once again skip the `if` statement and continue to the `else` statement, where we obtain that `factorial(2) = 2 * factorial(1)`. 
+    * At this point, `factorial(3) = 3 * (2 * factorial(1))`
+
+* To calculate `factorial(1)`, since the argument passed to the function _is_ equal to 1, we return 1. 
+    * At this point, `factorial(3) = 3 * 2 * 1`, and our code returns the answer we expect, `6`. 
+
+Try it out in the code cell below!
+
+
+```python
+# Uncomment the lines of code below:
+
+# def factorial(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return n * factorial(n-1) 
+
+# factorial(3)
+```
 
 ## Summary
 
