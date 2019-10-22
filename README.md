@@ -1,8 +1,6 @@
 
 # Permutations and Factorials
 
-
-
 ## Introduction
 
 In the previous lab, you defined a few sample spaces by counting the total number of possible outcomes. This is not very practical when sample spaces grow. In this lab, you'll be introduced to *permutations*, which will provide a structured way to help you define sample space sizes!
@@ -10,10 +8,11 @@ In the previous lab, you defined a few sample spaces by counting the total numbe
 ## Objectives
 
 You will be able to: 
-- Understand how to count permutations, and how factorials are the building blocks of permutations
-- Understand how to mathematically derive how many permutations there are for big sets
-- Understand how to compute permutations of a subset
-- Learn about permutations with replacement and repetition
+
+* Describe how factorials are related to permutations
+* Mathematically derive how many permutations there are for large sets
+* Calculate permutations of a subset
+* Calculate permutations with repetition and replacement
 
 ## Defining the Sample Space by Counting
 
