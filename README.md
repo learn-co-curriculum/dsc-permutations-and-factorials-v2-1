@@ -99,47 +99,12 @@ In the example presented to you, we wanted to count all possible ways in which t
 
 Here, $3! = (3 * 2 * 1) = 6$. Notice that this is the same as writing $3 * 2! = 3 * (2 * 1)$ and $3 * 2 * 1! = 3 * 2 * (1)$. (By definition, the factorial of 1, $1!$, is equal to 1. The factorial of 0, $0!$ is also defined to be equal to 1.)
 
-We can generalize this to the case of computing the factorial of an integer n, $n!$. The factorial of n, $n!$, can be written as $n * (n-1)!$, which itself can be written as $n * (n-1) * (n-2)!$. That is, we can define the factorial of n in terms of the product of n by the factorial of (n-1), and so on and so forth, as seen in the equation below: 
+We can generalize this to the case of computing the factorial of an integer n, $n!$. The factorial of n, $n!$, can be written as $n * (n-1)!$, which itself can be written as $n * (n-1) * (n-2)!$. That is, we can define the factorial of n in terms of the product of $n$ and the factorial of $(n-1)$, and the factorial $(n-1)$ can be defined in terms of the product of $(n-1)$ and the factorial of $(n-2)$, and so on and so forth, as seen in the equation below, until we get to $1!$, which is defined to be equal to 1: 
 
 $$ n! = n * (n-1)! = n * (n-1) * (n-2)! = ... = n * (n-1) * (n-2) * \ldots * 2! = n* (n-1) * (n-2) * \ldots * 2 * 1! $$ 
 
 ### Recursion 
-When we define a function in terms of itself, in this case, the factorial of n in terms of the factorial of (n-1), we are using **recursion**.  Recursive functions are functions that can call themselves in order to loop until a condition is met. In the Appendix to this Module, we go over recursive functions in Python in more detail.
-
-We can use recursion to define a function that will return the factorial of an integer n as follows: 
-
-``` python
-def factorial(n):
-    if n == 1:
-        return 1
-    else:
-        return n * factorial(n-1) 
-```
-
-Let's go over what happens with this function for the case n = 3: 
-
-* To start, since n is not equal to 1, we skip the `if` statement and continue to the `else` statement, where we obtain that `factorial(3) = 3 * factorial(2)`.
-
-* To calculate `factorial(2)`, since the argument passed to the function is not equal to 1, we once again skip the `if` statement and continue to the `else` statement, where we obtain that `factorial(2) = 2 * factorial(1)`. 
-    * At this point, `factorial(3) = 3 * (2 * factorial(1))`
-
-* To calculate `factorial(1)`, since the argument passed to the function _is_ equal to 1, we return 1. 
-    * At this point, `factorial(3) = 3 * 2 * 1`, and our code returns the answer we expect, `6`. 
-
-Try it out in the code cell below!
-
-
-```python
-# Uncomment the lines of code below:
-
-# def factorial(n):
-#     if n == 1:
-#         return 1
-#     else:
-#         return n * factorial(n-1) 
-
-# factorial(3)
-```
+When we define a function in terms of itself, in this case, the factorial of n in terms of the factorial of (n-1), we are using **recursion**.  Recursive functions are functions that can call themselves in order to loop until a condition is met. In the next lab, you'll get a glimpse on how to write a recursive function in Python, but in the Appendix to this Module, we go over recursive functions in Python in much more detail.
 
 ## Summary
 
