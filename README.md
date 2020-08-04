@@ -43,7 +43,7 @@ The problem setting, in general, is that there are  <img src="https://render.git
 
 This is a way how you can tackle this. You're the lead singer and have to decide which song to play first. You have 3 songs to choose from, so 3 ways of choosing a first song. Then, you move on to the second song. You've chosen the first one, so you have 2 songs to choose from now, etc. Mathematically, this boils down to:
 
-  <img src="https://render.githubusercontent.com/render/math?math=\text{# Beyoncé permutations} = 3*2*1 = 3 ! = 6"> 
+  <img src="https://render.githubusercontent.com/render/math?math=\text{#Beyoncé%20permutations}=3*2*1=3!=6"> 
 
 Generalizing this to  <img src="https://render.githubusercontent.com/render/math?math=n"> , this means that the number of permutations with  <img src="https://render.githubusercontent.com/render/math?math=n"> distinct objects is  <img src="https://render.githubusercontent.com/render/math?math=n!"> , or the factorial of  <img src="https://render.githubusercontent.com/render/math?math=n"> .
 
@@ -53,7 +53,7 @@ Now, let's consider another example. "The Single Ladies" are still playing a con
 
 When the band members decide on the first song, they have 8 possible songs to choose from. When choosing the second song, they have 7 to choose from. Then for the third song, they have 6 left.
 
-  <img src="https://render.githubusercontent.com/render/math?math=\text{# Beyoncé k-permutations} = 8*7*6 = 336"> 
+  <img src="https://render.githubusercontent.com/render/math?math=\text%20{#Beyoncé k-permutations}=8*7*6=336"> 
 
 formalizing this, the question is how many ways we can select  <img src="https://render.githubusercontent.com/render/math?math=k"> elements out of a pool of  <img src="https://render.githubusercontent.com/render/math?math=n"> objects. The answer is 
 
