@@ -1,4 +1,3 @@
-
 # Permutations and Factorials
 
 ## Introduction
@@ -43,7 +42,7 @@ The problem setting, in general, is that there are $n$ objects and we want to kn
 
 This is a way how you can tackle this. You're the lead singer and have to decide which song to play first. You have 3 songs to choose from, so 3 ways of choosing a first song. Then, you move on to the second song. You've chosen the first one, so you have 2 songs to choose from now, etc. Mathematically, this boils down to:
 
- $ \text{# Beyoncé permutations} = 3*2*1 = 3 ! = 6$
+`# Beyoncé permutations` $ = 3 \times 2 \times 1 = 3 ! = 6$
 
 Generalizing this to $n$, this means that the number of permutations with $n$ distinct objects is $n!$, or the factorial of $n$.
 
@@ -53,11 +52,11 @@ Now, let's consider another example. "The Single Ladies" are still playing a con
 
 When the band members decide on the first song, they have 8 possible songs to choose from. When choosing the second song, they have 7 to choose from. Then for the third song, they have 6 left.
 
- $ \text{# Beyoncé k-permutations} = 8*7*6 = 336$
+`# Beyoncé k-permutations` $ = 8 \times 7 \times 6 = 336$
 
 formalizing this, the question is how many ways we can select $k$ elements out of a pool of $n$ objects. The answer is 
 
-$n*(n-1)*...*(n-k+1)$ or in other words, $P_{k}^{n}= \dfrac{n!}{(n-k)!}$
+$n \times (n-1) \times \ldots \times (n-k+1)$ or in other words, $P_{k}^{n}= \dfrac{n!}{(n-k)!}$
 
 This is known as a $k$-permutation of $n$.
 
@@ -67,7 +66,7 @@ The idea is here that we only "care" about the order of the first $k$ objects. T
 
 When talking about setlists, it makes total sense to assume that songs will not be played twice. This is not always how it works though. Imagine a bag with three marbles in it: a green one, a red one, and a blue one. Now we'll draw marbles three times in a row, but each time, we'll write down the marble color and *put it back in the bag* before drawing again.
 
-Now the number of possible outcomes is $3 * 3 * 3$.
+Now the number of possible outcomes is $3 \times 3 \times 3$.
 
 Generalizing this to $n$, this means that the number of permutations with replacement when having $n$ distinct objects is equal to $n^j$ where $j$ is the number of "draws".
 
@@ -95,13 +94,13 @@ where $n_j$ stands for identical objects of type $j$ (the distinct letters in ou
 
 At the start of this lesson, when discussing the number of possible permutations we can obtain for n distinct objects, we mentioned the concept of the factorial of n, denoted by $n!$. 
 
-In the example presented to you, we wanted to count all possible ways in which three different Beyoncé songs could be played by the Beyoncé tribute band "The Single Ladies". There were 3 possible ways of choosing a first song, 2 possible ways of choosing a second song, and only 1 way of choosing a third and final song, for $3 * 2 *1 = 6$ different ways in which the three different songs could be played. This number, 6, is equal to the factorial of 3, $3!$, the number of permutations of 3 distinct objects. 
+In the example presented to you, we wanted to count all possible ways in which three different Beyoncé songs could be played by the Beyoncé tribute band "The Single Ladies". There were 3 possible ways of choosing a first song, 2 possible ways of choosing a second song, and only 1 way of choosing a third and final song, for $3 \times 2 \times 1 = 6$ different ways in which the three different songs could be played. This number, 6, is equal to the factorial of 3, $3!$, the number of permutations of 3 distinct objects. 
 
-Here, $3! = (3 * 2 * 1) = 6$. Notice that this is the same as writing $3 * 2! = 3 * (2 * 1)$ and $3 * 2 * 1! = 3 * 2 * (1)$. (By definition, the factorial of 1, $1!$, is equal to 1. The factorial of 0, $0!$ is also defined to be equal to 1.)
+Here, $3! = (3 \times 2 \times 1) = 6$. Notice that this is the same as writing $3 \times 2! = 3 \times (2 \times 1)$ and $3 \times 2 \times 1! = 3 \times 2 \times (1)$. (By definition, the factorial of 1, $1!$, is equal to 1. The factorial of 0, $0!$ is also defined to be equal to 1.)
 
-We can generalize this to the case of computing the factorial of an integer n, $n!$. The factorial of n, $n!$, can be written as $n * (n-1)!$, which itself can be written as $n * (n-1) * (n-2)!$. That is, we can define the factorial of n in terms of the product of $n$ and the factorial of $(n-1)$, and the factorial $(n-1)$ can be defined in terms of the product of $(n-1)$ and the factorial of $(n-2)$, and so on and so forth, as seen in the equation below, until we get to $1!$, which is defined to be equal to 1: 
+We can generalize this to the case of computing the factorial of an integer n, $n!$. The factorial of n, $n!$, can be written as $n * (n-1)!$, which itself can be written as $n \times (n-1) \times (n-2)!$. That is, we can define the factorial of n in terms of the product of $n$ and the factorial of $(n-1)$, and the factorial $(n-1)$ can be defined in terms of the product of $(n-1)$ and the factorial of $(n-2)$, and so on and so forth, as seen in the equation below, until we get to $1!$, which is defined to be equal to 1: 
 
-$$ n! = n * (n-1)! = n * (n-1) * (n-2)! = ... = n * (n-1) * (n-2) * \ldots * 2! = n* (n-1) * (n-2) * \ldots * 2 * 1! $$ 
+$$ n! = n \times (n-1)! = n \times (n-1) \times (n-2)! = \ldots = n \times (n-1) \times (n-2) \times \ldots \times 2! = n \times (n-1) \times (n-2) \times \ldots \times 2 \times 1! $$ 
 
 ### Recursion 
 When we define a function in terms of itself, in this case, the factorial of n in terms of the factorial of (n-1), we are using **recursion**.  Recursive functions are functions that can call themselves in order to loop until a condition is met. In the next lab, you'll get a glimpse on how to write a recursive function in Python, but in the Appendix to this Module, we go over recursive functions in Python in much more detail.
